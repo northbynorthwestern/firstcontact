@@ -18,10 +18,14 @@ setTimeout(function(){
     element: document.querySelector(".text-reveal-target"),
     handler: function(direction) {
       console.log("Waypoint 2");
-      document.getElementById("text-1").classList.add("text-fly");
-      setTimeout(function(){document.getElementById("text-2").classList.add("text-fly");}, 600);
-      setTimeout(function(){document.getElementById("text-3").classList.add("text-fly");}, 1200);
-      setTimeout(function(){document.getElementById("text-4").classList.add("text-fly");}, 1800);
+      document.getElementById("text-1").classList.add("text-activated");
+      document.getElementById("text-2").classList.add("text-activated");
+      document.getElementById("text-3").classList.add("text-activated");
+      document.getElementById("text-4").classList.add("text-activated");
+      setTimeout(function(){document.getElementById("text-1").classList.add("text-fly");}, 600);
+      setTimeout(function(){document.getElementById("text-2").classList.add("text-fly");}, 1200);
+      setTimeout(function(){document.getElementById("text-3").classList.add("text-fly");}, 1800);
+      setTimeout(function(){document.getElementById("text-4").classList.add("text-fly");}, 2400);
       setTimeout(function(){document.querySelector(".message-attribution").classList.add("attribution-appear");}, 2400)
     },
     offset: 300,
