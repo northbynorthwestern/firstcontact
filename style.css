@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 body::-webkit-scrollbar {
     width: .5em;
     z-index: 500;
@@ -195,7 +198,6 @@ figcaption{
     margin: 0 auto 1em auto;
 }
 .text-message{
-    display: none;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     width: 25%;
@@ -207,9 +209,6 @@ figcaption{
     position: relative;
     transition: left 1s;
     user-select: none;
-}
-.text-activated{
-    display: block !important;
 }
 .text-fly{
     left: 0 !important;
@@ -230,6 +229,9 @@ figcaption{
 @media screen and (max-width: 1000px){
     #morty-email, #email-notif{
         width: 90%;
+    }
+    .content-container{
+        overflow: hidden;
     }
     .logo-container{
         height: 80%;
