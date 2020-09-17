@@ -1,0 +1,243 @@
+body{
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    width: .5em;
+    z-index: 500;
+    opacity: .5;
+  }
+   
+   body::-webkit-scrollbar-track{
+       background-color: lightgray;
+   }
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 5px;
+  }
+:root{
+    --text-font: 'PT Serif', serif;
+    --subhed-font: 'Literata', serif;
+    --hed-font: 'Literata', serif;
+}
+.nav-bar{
+    box-shadow: 3px 1px 3px;
+    z-index: 1000;
+    padding: .5% 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -50vw;
+    height: 6%;
+    background-color: black;
+    transition: top 1s ease;
+}
+.logo-container{
+    margin-left: .5em;
+    height: 100%;
+}
+.logo-container:hover .nbn-logo{
+    fill: #836EAA;
+}
+.nbn-logo{
+    transition: fill 1s ease;
+    fill: white;
+}
+.nav-active{
+    top: 0;
+}
+.article-hed{
+    text-align: center;
+    font-weight: 700;
+    font-family: var(--hed-font);
+}
+.article-byline, .footer-credits{
+    font-weight: 600;
+    text-align: center;
+    font-family: var(--subhed-font);
+}
+.footer-credits{
+    position: relative;
+    bottom: 0;
+    top: 5em;
+}
+.article-dek{
+    width: 80%;
+    margin: auto;
+    font-family: var(--subhed-font);
+    font-weight: 300;
+    text-align: center;
+}
+.timestamp{
+    margin-top: 10%;
+    text-align: center;
+}
+@keyframes time-appear{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.article-top-info{
+    opacity: 0;
+}
+.title-appear{
+    animation: time-appear 1s ease forwards;
+}
+.email-date{
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    opacity: 0;
+    animation: time-appear 1s .5s forwards;
+}
+.email-time{
+    user-select: none;
+    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0;
+    animation: time-appear 1s 1.5s forwards;
+}
+
+#morty-email h2{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+#morty-email{
+    margin: auto;
+    padding: 0 3%;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px;
+    user-select: none;
+}
+.email-body{
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.3em;
+}
+.email-blurred{
+        color: transparent;
+        text-shadow: 0 0 5px rgba(0,0,0,0.5);
+     
+}
+
+.email-active{
+    display: block;
+    /* opacity: 1; */
+}
+
+@keyframes notification{
+    from{
+        left: 100vw;
+    }
+    to{
+        left: 0;
+    }
+}
+#email-notif{
+    font-family: sans-serif;
+    user-select: none;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    left: 100vw;
+    box-shadow: 1px 1px 1px;
+    width: 50%;
+    height: 5%;
+    padding: 0 3%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    transition: background-color 1s ease;
+    animation: notification 1s 2.5s forwards;
+}
+#email-notif:hover{
+    background-color: #E4E0EE;
+}
+.email-transition{
+    width: 50%;
+    height: 40%;
+}
+.clicked{
+    display: none;
+}
+figcaption{
+    position: relative;
+    left: 100vw;
+    text-align: center;
+    font-color: gray;
+    margin-top: 10px;
+    font-family: 1.3em;
+    animation: notification 1s 2.75s forwards;
+}
+.message-attribution{
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    margin-bottom: 1em;
+}
+.attribution-appear{
+    opacity: 1;
+}
+.article-body{
+    opacity: 0;
+    padding-bottom: 10%;
+}
+.article-active, .article-active p{
+    animation: time-appear 1s ease .5s forwards;
+}
+.article-body p{
+    line-height: 1.5;
+    font-family: var(--text-font);
+    font-weight: 400;
+    width: 50%;
+    font-size: 1.3em;
+    margin: 0 auto 1em auto;
+}
+.text-message{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    width: 25%;
+    border: 1px solid black;
+    margin: 1em auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px;
+    padding: 1em;
+    position: relative;
+    transition: left 1s;
+    user-select: none;
+}
+.text-fly{
+    left: 0 !important;
+}
+#text-1{
+    left: -100vw;
+}
+#text-2{
+    left: 100vw;
+}
+#text-3{
+    left: -100vw;
+}
+#text-4{
+    left: 100vw;
+}
+
+@media screen and (max-width: 1000px){
+    #morty-email, #email-notif{
+        width: 90%;
+    }
+    .logo-container{
+        height: 80%;
+    }
+    .article-body p{
+        width: 80%;
+        font-size: 1.3em;
+        margin: 0 auto 1em auto;
+    }
+    .nav-bar{
+        padding: 1% 0 0 0 ;
+    }
+}
