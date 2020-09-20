@@ -47,8 +47,10 @@ body::-webkit-scrollbar {
 }
 .article-hed{
     text-align: center;
+    font-size: 3em;
     font-weight: 700;
     font-family: var(--hed-font);
+    margin-bottom: 0;
 }
 .article-byline, .footer-credits{
     font-weight: 600;
@@ -59,6 +61,10 @@ body::-webkit-scrollbar {
     position: relative;
     bottom: 0;
     top: 5em;
+    padding-bottom: 10vh;
+    font-size: 1.5em;
+    width: 70%;
+    margin: auto
 }
 .article-dek{
     width: 80%;
@@ -70,6 +76,15 @@ body::-webkit-scrollbar {
 .timestamp{
     margin-top: 10%;
     text-align: center;
+}
+.pquote{
+    font-family: var(--hed-font);
+    width: 50%;
+    margin: 3em auto;
+}
+.pquote h3{
+    text-align: right;
+    font-weight: 600;
 }
 @keyframes time-appear{
     from{
@@ -167,10 +182,13 @@ figcaption{
     position: relative;
     left: 100vw;
     text-align: center;
-    font-color: gray;
+    color: gray;
     margin-top: 10px;
-    font-family: 1.3em;
+    font-size: 1.3em;
     animation: notification 1s 2.75s forwards;
+}
+.fighidden{
+    display: none;
 }
 .message-attribution{
     left: 0;
@@ -240,6 +258,9 @@ figcaption{
         width: 80%;
         font-size: 1.3em;
         margin: 0 auto 1em auto;
+    }
+    .pquote{
+        width: 80%;
     }
     .text-message{
         width: 80%;

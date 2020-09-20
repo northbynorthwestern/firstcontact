@@ -2,7 +2,8 @@ $(document).ready(function(){
   $(this).scrollTop(0);
 });
 $("#morty-email").hide();
-  document.getElementById("email-notif").onclick = function(){;
+  document.getElementById("email-notif").onclick = function(){
+    document.querySelector(".click-prompt").classList.add("fighidden");
 $("#morty-email").slideDown("slow");
 setTimeout(function(){ document.querySelector(".oof-line").classList.add("targetPoint"); var bodyReveal = new Waypoint({
   element: document.querySelector(".targetPoint"),
@@ -10,6 +11,7 @@ setTimeout(function(){ document.querySelector(".oof-line").classList.add("target
     console.log("Waypoint")
     document.querySelector(".article-top-info").classList.add("title-appear");
     document.querySelector(".article-body").classList.add("article-active");
+    document.querySelector(".nav-bar").classList.add("nav-active")
   },
 })
 
