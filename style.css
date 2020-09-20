@@ -61,10 +61,10 @@ body::-webkit-scrollbar {
     position: relative;
     bottom: 0;
     top: 5em;
-    padding-bottom: 10vh;
-    font-size: 1.5em;
+    font-size: 1em;
     width: 70%;
-    margin: auto
+    margin: auto;
+    font-style: italic;
 }
 .article-dek{
     width: 80%;
@@ -258,6 +258,10 @@ figcaption{
         width: 80%;
         font-size: 1.3em;
         margin: 0 auto 1em auto;
+    }
+    .footer-credits{
+        top: 2em;
+        width: 80%;
     }
     .pquote{
         width: 80%;
